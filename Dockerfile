@@ -16,6 +16,9 @@ COPY expires.conf /etc/nginx/conf.d/expires.conf
 # Set a path to config file to be written, can be changed at runtime
 ENV CONFIG_FILE_PATH /app
 
+# Set a name for the config file to be written, can be changed at runtime
+ENV CONFIG_FILE_NAME config.js
+
 RUN mkdir /app
 
 RUN echo "<code>Add your index.html to /app: COPY index.html /app/index.html</code>" > /app/index.html

@@ -1,4 +1,4 @@
-[![docker pull socialengine/nginx-spa][image shield]][docker hub]
+[![docker pull Falx/nginx-spa][image shield]][docker hub]
 
 This is a Docker image used to serve a Single Page App (pure frontend javascript) using nginx, it support PushState, and includes a way to pass configuration at run time.
 
@@ -18,7 +18,7 @@ This docker image is built for `index.html` file being in the `/app` directory. 
 At a minimum, you will want this in your `Dockerfile`:
 
 ```Dockerfile
-FROM socialengine/nginx-spa
+FROM Falx/nginx-spa
 
 COPY build/ /app
 COPY index.html /app/index.html
@@ -48,8 +48,10 @@ $ docker run -e RAVEN_DSN=yourkey -e API_URL=http://myapi.example.com  \
 
 This will create a `config.js` file, which you can then add to your index.html, or load asynchronously. The path can be controlled with `CONFIG_FILE_PATH` environmental variable.
 
+The filename can be controller with `CONFIG_FILE_NAME` environment variable
+
 [push state]: https://developer.mozilla.org/en-US/docs/Web/API/History_API
-[latest]: https://github.com/SocialEngine/docker-nginx-spa/blob/master/Dockerfile
+[latest]: https://github.com/Falx/docker-nginx-spa/blob/master/Dockerfile
 [base image]: https://github.com/nginxinc/docker-nginx
-[image shield]: https://img.shields.io/badge/dockerhub-socialengine%2Fnginx--spa-blue.svg
-[docker hub]: https://registry.hub.docker.com/u/socialengine/nginx-spa/
+[image shield]: https://img.shields.io/badge/dockerhub-Falx%2Fnginx--spa-blue.svg
+[docker hub]: https://registry.hub.docker.com/u/Falx/nginx-spa/

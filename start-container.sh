@@ -10,9 +10,9 @@ if [[ $CONFIG_VARS ]]; then
 
   JSON=`json_env --json $ARGS`
 
-  echo " ==> Writing ${CONFIG_FILE_PATH}/config.js with ${JSON}"
+  echo " ==> Writing ${CONFIG_FILE_PATH}/${CONFIG_FILE_NAME} with ${JSON}"
 
-  echo "window.__env = ${JSON}" > ${CONFIG_FILE_PATH}/config.js
+  echo "window.__env = ${JSON}" > ${CONFIG_FILE_PATH}/${CONFIG_FILE_NAME}
 fi
 
 exec "$@"
