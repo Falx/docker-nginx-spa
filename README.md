@@ -1,4 +1,4 @@
-[![docker pull falx/nginx-spa][image shield]][docker hub]
+[![docker pull tdupont/nginx-spa][image shield]][docker hub]
 
 This is a Docker image used to serve a Single Page App (pure frontend javascript) using nginx, it support PushState, and includes a way to pass configuration at run time.
 
@@ -18,7 +18,7 @@ This docker image is built for `index.html` file being in the `/app` directory. 
 At a minimum, you will want this in your `Dockerfile`:
 
 ```Dockerfile
-FROM falx/nginx-spa
+FROM tdupont/nginx-spa
 
 COPY build/ /app
 COPY index.html /app/index.html
@@ -53,5 +53,5 @@ The filename can be controller with `CONFIG_FILE_NAME` environment variable
 [push state]: https://developer.mozilla.org/en-US/docs/Web/API/History_API
 [latest]: https://github.com/Falx/docker-nginx-spa/blob/master/Dockerfile
 [base image]: https://github.com/nginxinc/docker-nginx
-[image shield]: https://img.shields.io/badge/dockerhub-falx%2Fnginx--spa-blue.svg
-[docker hub]: https://registry.hub.docker.com/u/falx/nginx-spa/
+[image shield]: https://img.shields.io/badge/dockerhub-tdupont%2Fnginx--spa-blue.svg
+[docker hub]: https://registry.hub.docker.com/u/tdupont/nginx-spa/
