@@ -11,7 +11,7 @@ if [[ $CONFIG_VARS ]]; then
   JSON=`json_env --json $ARGS`
 
   echo " ==> Writing ${CONFIG_FILE_PATH}/${CONFIG_FILE_NAME} with ${JSON}"
-  echo "window.__env = ${JSON}" > ${CONFIG_FILE_PATH}/${CONFIG_FILE_NAME}
+  echo "${JSON}" > ${CONFIG_FILE_PATH}/${CONFIG_FILE_NAME}
   
 fi
 
